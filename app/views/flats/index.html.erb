@@ -1,0 +1,17 @@
+
+
+<div class="row">
+<% @flats.each do |flat| %>
+  <div class="col-3">
+    <div class="card" style="height: 400px;">
+      <img src="https://images.unsplash.com/photo-1464890100898-a385f744067f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470" class="card-img-top" alt="">
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title"><%= flat.name %></h5>
+        <p class="card-text"><%= flat.description.first(45) + "..." %></p>
+        <%= link_to "See more", flat_path(flat), class: "btn btn-dark align-bottom" %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+</div>
